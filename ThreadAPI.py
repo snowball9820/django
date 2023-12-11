@@ -1,11 +1,11 @@
 from openai import OpenAI
 import time
 
-client = OpenAI(api_key = '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')
+client = OpenAI(api_key = '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')
 
 
 #https://platform.openai.com/assistants 이 사이트에서 Assistant 관리
-tour_assistant_id = 'asst_TnG0mButeYqtGKKgTZ5hmbFj'
+tour_assistant_id = 'asst_Uk29P8rZJo2fcYLHzUNxRVU6'
 TOUR_ASSISTANT_ID = tour_assistant_id  # or a hard-coded ID like "asst-..."
 
 #최초 thread를 만들고 메시지를 연결한 후 답을 구한다 
@@ -47,4 +47,13 @@ def wait_on_run(run, thread):
         )
         time.sleep(0.5)
     return run
+'''
+thread1, run1 = create_thread_and_run(
+    "부산에서 관광할 만한 다섯곳 추천해주세요"
+)
+run1 = wait_on_run(run1, thread1)
+pretty_print(get_response(thread1))
 
+run2 = submit_message(TOUR_ASSISTANT_ID, thread1, "첫번째 장소를 추천한 이유는?")
+run2 = wait_on_run(run2, thread1)
+pretty_print(get_response(thread1))'''
