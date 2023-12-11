@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <form method="post" action="{% url 'gamepage' %}">
+        {% csrf_token %}
+        <label for="user_input">문자열 입력:</label>
+        <p></p>
+        <!--<input type="text" name="user_input"  id="user_input" required>-->
+        <textarea name="user_input" id="user_input" rows="5" cols="100" required></textarea>
+        <p></p>
+        <button type="submit">전송</button>
+    </form>
+    <div>
+        <div>
+            <h5>
+                {{Data}}
+            </h5>
+        </div>
+    </div>
+</body>
+{% endblock content %}

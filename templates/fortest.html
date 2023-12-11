@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <div>
+        <h5>
+            Fortest
+            <ul>
+                {% for fruit in Person3 %}
+                <li>{{fruit}}</li>
+                {% endfor %}
+            </ul>
+        </h5>
+    </div>
+</body>
+{% endblock content %}
