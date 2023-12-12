@@ -2,7 +2,7 @@ from openai import OpenAI
 
 def qna(question) :
    
-    client = OpenAI(api_key = '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')
+    client = OpenAI(api_key = '')
 
     messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
     messages.append(

@@ -7,7 +7,7 @@ import ThreadAPI
 
 # Create your views here.
 
-tour_assistant_id = 'asst_Uk29P8rZJo2fcYLHzUNxRVU6'
+tour_assistant_id = ''
 TOUR_ASSISTANT_ID = tour_assistant_id  # or a hard-coded ID like "asst-..."
 
 def gamepage(request):
